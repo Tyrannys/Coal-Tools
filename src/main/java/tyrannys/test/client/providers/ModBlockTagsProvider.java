@@ -3,11 +3,11 @@ package tyrannys.test.client.providers;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tyrannys.test.TestMod;
+import tyrannys.test.CoalTools;
 
 public class ModBlockTagsProvider extends BlockTagsProvider {
     public ModBlockTagsProvider(DataGenerator gen, ExistingFileHelper existingFileHelper) {
-        super(gen, TestMod.MODID, existingFileHelper);
+        super(gen, CoalTools.MODID, existingFileHelper);
     }
 
 

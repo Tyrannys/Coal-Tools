@@ -7,11 +7,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import tyrannys.test.setup.ModItems;
 
-public class TestItemGroup extends CreativeModeTab {
+public class CoalToolsItemGroup extends CreativeModeTab {
 
     private final ItemLike icon;
 
-    public TestItemGroup(String label, ItemLike icon) {
+    public CoalToolsItemGroup(String label, ItemLike icon) {
         super(label);
         this.icon = icon;
     }
@@ -20,7 +20,7 @@ public class TestItemGroup extends CreativeModeTab {
     public ItemStack makeIcon() {
         return new ItemStack(icon);
     }
-    public static final TestItemGroup TEST_ITEM_GROUP = new TestItemGroup("moditemgroup", ()->
+    public static final CoalToolsItemGroup COAL_TOOLS_ITEM_GROUP = new CoalToolsItemGroup("coaltoolsitemgroup", ()->
             (ModItems.COAL_PICKAXE.get()));
 
 }

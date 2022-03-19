@@ -2,19 +2,19 @@ package tyrannys.test.client.providers;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
-import tyrannys.test.TestMod;
-import tyrannys.test.client.player.TestItemGroup;
+import tyrannys.test.CoalTools;
+import tyrannys.test.client.player.CoalToolsItemGroup;
 import tyrannys.test.setup.ModItems;
 
 public class ModLanguageProvider extends LanguageProvider {
 
     public ModLanguageProvider(DataGenerator gen, String locale) {
-        super(gen, TestMod.MODID, locale);
+        super(gen, CoalTools.MODID, locale);
     }
 
     @Override
     protected void addTranslations() {
-        add("itemgroup." + TestItemGroup.TEST_ITEM_GROUP, "Test");
+        add("itemgroup." + CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP, "Coal Tools");
 
         add(ModItems.COAL_PICKAXE.get(), "Coal Pickaxe");
         add(ModItems.FIRE_PICKAXE.get(), "Fire Pickaxe");

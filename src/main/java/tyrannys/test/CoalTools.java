@@ -21,14 +21,14 @@ import tyrannys.test.setup.ModItems;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("test")
-public class TestMod {
-    public static final String MODID = "test";
+@Mod("coaltools")
+public class CoalTools {
+    public static final String MODID = "coaltools";
 
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public TestMod() {
+    public CoalTools() {
         ModItems.init();
         ModBlocks.init();
 
@@ -59,7 +59,7 @@ public class TestMod {
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
         // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("test", "helloworld", () -> {
+        InterModComms.sendTo("coaltools", "helloworld", () -> {
             LOGGER.info("Hello world from the MDK");
             return "Hello world";
         });

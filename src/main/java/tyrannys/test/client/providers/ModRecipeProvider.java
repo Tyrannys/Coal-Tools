@@ -6,7 +6,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
-import tyrannys.test.TestMod;
+import tyrannys.test.CoalTools;
 import tyrannys.test.setup.ModItems;
 
 import java.util.function.Consumer;
@@ -26,7 +26,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', Items.STICK)
                 .define('Y', Items.COAL)
                 .unlockedBy("has_item", has(Items.COAL))
-                .save(consumer, new ResourceLocation(TestMod.MODID, "coal_pickaxe"));
+                .save(consumer, new ResourceLocation(CoalTools.MODID, "coal_pickaxe"));
         ShapedRecipeBuilder.shaped(ModItems.COAL_SWORD.get(), 1)
                 .pattern(" Y ")
                 .pattern(" Y ")
@@ -34,7 +34,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', Items.STICK)
                 .define('Y', Items.COAL)
                 .unlockedBy("has_item", has(Items.COAL))
-                .save(consumer, new ResourceLocation(TestMod.MODID, "coal_sword"));
+                .save(consumer, new ResourceLocation(CoalTools.MODID, "coal_sword"));
         ShapedRecipeBuilder.shaped(ModItems.COAL_AXE.get(), 1)
                 .pattern("YY ")
                 .pattern("YX ")
@@ -42,7 +42,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', Items.STICK)
                 .define('Y', Items.COAL)
                 .unlockedBy("has_item", has(Items.COAL))
-                .save(consumer, new ResourceLocation(TestMod.MODID, "coal_axe"));
+                .save(consumer, new ResourceLocation(CoalTools.MODID, "coal_axe"));
         ShapedRecipeBuilder.shaped(ModItems.COAL_AXE.get(), 1)
                 .pattern(" YY")
                 .pattern(" XY")
@@ -50,7 +50,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', Items.STICK)
                 .define('Y', Items.COAL)
                 .unlockedBy("has_item", has(Items.COAL))
-                .save(consumer, new ResourceLocation(TestMod.MODID, "coal_axe2"));
+                .save(consumer, new ResourceLocation(CoalTools.MODID, "coal_axe2"));
         ShapedRecipeBuilder.shaped(ModItems.COAL_SHOVEL.get(), 1)
                 .pattern(" Y ")
                 .pattern(" X ")
@@ -58,7 +58,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', Items.STICK)
                 .define('Y', Items.COAL)
                 .unlockedBy("has_item", has(Items.COAL))
-                .save(consumer, new ResourceLocation(TestMod.MODID, "coal_shovel"));
+                .save(consumer, new ResourceLocation(CoalTools.MODID, "coal_shovel"));
         ShapedRecipeBuilder.shaped(ModItems.COAL_HOE.get(), 1)
                 .pattern(" YY")
                 .pattern(" X ")
@@ -66,7 +66,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', Items.STICK)
                 .define('Y', Items.COAL)
                 .unlockedBy("has_item", has(Items.COAL))
-                .save(consumer, new ResourceLocation(TestMod.MODID, "coal_hoe"));
+                .save(consumer, new ResourceLocation(CoalTools.MODID, "coal_hoe"));
         ShapedRecipeBuilder.shaped(ModItems.COAL_HOE.get(), 1)
                 .pattern("YY ")
                 .pattern(" X ")
@@ -74,7 +74,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', Items.STICK)
                 .define('Y', Items.COAL)
                 .unlockedBy("has_item", has(Items.COAL))
-                .save(consumer, new ResourceLocation(TestMod.MODID, "coal_hoe2"));
+                .save(consumer, new ResourceLocation(CoalTools.MODID, "coal_hoe2"));
     }
 
     @Override

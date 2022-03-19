@@ -4,7 +4,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import tyrannys.test.TestMod;
+import tyrannys.test.CoalTools;
 
 public class ModTags {
 
@@ -18,7 +18,7 @@ public class ModTags {
 
         //Needed for the forge tag
         private static TagKey<Item> forge(String path) {
-            return ItemTags.create(new ResourceLocation(TestMod.MODID, path));
+            return ItemTags.create(new ResourceLocation(CoalTools.MODID, path));
         }
     }
 

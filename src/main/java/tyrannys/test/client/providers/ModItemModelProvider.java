@@ -3,13 +3,13 @@ package tyrannys.test.client.providers;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import tyrannys.test.TestMod;
+import tyrannys.test.CoalTools;
 import tyrannys.test.setup.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
     public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, TestMod.MODID, existingFileHelper);
+        super(generator, CoalTools.MODID, existingFileHelper);
     }
 
     @Override

@@ -18,7 +18,7 @@ group = 'Tyrannys'
 version = '1.0-SNAPSHOT'
 
 java {
-    archivesBaseName = 'test'
+    archivesBaseName = 'coaltools'
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
@@ -148,7 +148,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "testmod",
+                "Specification-Title"     : "coaltools",
                 "Specification-Vendor"    : "Tyrannys",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
