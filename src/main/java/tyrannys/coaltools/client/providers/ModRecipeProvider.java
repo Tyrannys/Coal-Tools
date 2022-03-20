@@ -4,10 +4,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import tyrannys.coaltools.CoalTools;
 import tyrannys.coaltools.setup.ModItems;
 
@@ -105,12 +103,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', Items.COAL)
                 .unlockedBy("has_item", has(Items.COAL))
                 .save(consumer, new ResourceLocation(CoalTools.MODID, "coal_feet"));
-
-
-        //Shapeless
-        ShapelessRecipeBuilder.shapeless(ModItems.REIGNITER.get(), 1)
-                .requires(Ingredient.of(Items.BLAZE_POWDER), 1)
-                .requires(Ingredient.of(Items.IRON_INGOT), 1)
+        ShapedRecipeBuilder.shaped(ModItems.REIGNITER.get(), 1)
+                .pattern("X ")
+                .pattern(" Y")
+                .define('X', Items.BLAZE_ROD)
+                .define('Y', Items.IRON_INGOT)
                 .unlockedBy("has_item", has(Items.BLAZE_ROD))
                 .save(consumer, new ResourceLocation(CoalTools.MODID, "reigniter"));
 

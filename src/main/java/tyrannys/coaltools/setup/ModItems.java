@@ -2,6 +2,9 @@ package tyrannys.coaltools.setup;
 
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -10,8 +13,7 @@ import tyrannys.coaltools.CoalTools;
 import tyrannys.coaltools.client.armor.ModArmorMaterials;
 import tyrannys.coaltools.client.items.Reigniter;
 import tyrannys.coaltools.client.player.CoalToolsItemGroup;
-import tyrannys.coaltools.client.tools.CoalPickaxe;
-import tyrannys.coaltools.client.tools.ModTiers;
+import tyrannys.coaltools.client.tools.*;
 
 public class ModItems {
 
@@ -22,7 +24,7 @@ public class ModItems {
     //Tools
     //Coal Pickaxe and upgrades
     public static RegistryObject<Item> COAL_PICKAXE = ITEMS.register("coal_pickaxe", () ->
-            new CoalPickaxe(ModTiers.COALTOOLS, 1, -2.8F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new CoalToolsPickaxe(ModTiers.COALTOOLS, 1, -2.8F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
 
     public static RegistryObject<Item> FIRE_PICKAXE = ITEMS.register("fire_pickaxe", () ->
@@ -39,7 +41,7 @@ public class ModItems {
 
     // Coal Sword and upgrades
     public static RegistryObject<Item> COAL_SWORD = ITEMS.register("coal_sword", () ->
-            new SwordItem(ModTiers.COALTOOLS, 3, -2.4F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new CoalToolsSword(ModTiers.COALTOOLS, 3, -2.4F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
 
     public static RegistryObject<Item> FIRE_SWORD = ITEMS.register("fire_sword", () ->
@@ -56,7 +58,7 @@ public class ModItems {
 
     //Coal Axe and upgrades
     public static RegistryObject<Item> COAL_AXE = ITEMS.register("coal_axe", () ->
-            new AxeItem(ModTiers.COALTOOLS, 6.0F, -2.4F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new CoalToolsAxe(ModTiers.COALTOOLS, 6, -2.4F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
 
     public static RegistryObject<Item> FIRE_AXE = ITEMS.register("fire_axe", () ->
@@ -73,7 +75,7 @@ public class ModItems {
 
     //Coal Shovel and upgrades
     public static RegistryObject<Item> COAL_SHOVEL = ITEMS.register("coal_shovel", () ->
-            new ShovelItem(ModTiers.COALTOOLS, 1.5F, -3.0F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new CoalToolsShovel(ModTiers.COALTOOLS, 1.5F, -3.0F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
 
     public static RegistryObject<Item> FIRE_SHOVEL = ITEMS.register("fire_shovel", () ->
@@ -90,7 +92,7 @@ public class ModItems {
 
     //Coal Hoe and upgrades
     public static RegistryObject<Item> COAL_HOE = ITEMS.register("coal_hoe", () ->
-            new HoeItem(ModTiers.COALTOOLS, -2, -2.8F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new CoalToolsHoe(ModTiers.COALTOOLS, -2, -2.8F, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
 
     public static RegistryObject<Item> FIRE_HOE = ITEMS.register("fire_hoe", () ->
@@ -112,10 +114,25 @@ public class ModItems {
             )
     );
 
+    //Block Items
+    public static RegistryObject<Item> FROZEN_FIRE_ORE_ITEM = fromBlock(ModBlocks.FROZEN_FIRE_ORE);
+
+    public static RegistryObject<Item> RAW_FROZEN_FIRE = ITEMS.register("raw_frozen_fire", () ->
+            new Item(
+                    new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant()
+            )
+    );
+
+    public static RegistryObject<Item> FROZEN_FIRE = ITEMS.register("frozen_fire", () ->
+            new Item(
+                    new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant()
+            )
+    );
+
     //Armor
     //Coal Helmets and upgrades
     public static RegistryObject<Item> COAL_HELM = ITEMS.register("coal_helm", ()->
-            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_HELM = ITEMS.register("fire_helm", ()->
             new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
@@ -129,7 +146,7 @@ public class ModItems {
 
     //Coal ChestPlates and upgrades
     public static RegistryObject<Item> COAL_CHEST = ITEMS.register("coal_chest", ()->
-            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_CHEST = ITEMS.register("fire_chest", ()->
             new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
@@ -143,7 +160,7 @@ public class ModItems {
 
     //Coal Legs and upgrades
     public static RegistryObject<Item> COAL_LEGS = ITEMS.register("coal_legs", ()->
-            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_LEGS = ITEMS.register("fire_legs", ()->
             new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
@@ -157,7 +174,7 @@ public class ModItems {
 
     //Coal Feet and upgrades
     public static RegistryObject<Item> COAL_FEET = ITEMS.register("coal_feet", ()->
-            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_FEET = ITEMS.register("fire_feet", ()->
             new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
@@ -168,4 +185,11 @@ public class ModItems {
     public static RegistryObject<Item> NETHERITE_BLAZE_FEET = ITEMS.register("netherite_blaze_feet", ()->
             new ArmorItem(ModArmorMaterials.NETHERITE_BLAZE, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
+
+    public static final BlockBehaviour.Properties BLOCK_PROPERTIES = BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops();
+    public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP);
+
+    public static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
+        return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), ITEM_PROPERTIES));
+    }
 }

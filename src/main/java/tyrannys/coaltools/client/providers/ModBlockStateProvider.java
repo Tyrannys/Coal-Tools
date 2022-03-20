@@ -4,6 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tyrannys.coaltools.CoalTools;
+import tyrannys.coaltools.setup.ModBlocks;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -13,6 +14,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
+        simpleBlock(ModBlocks.FROZEN_FIRE_ORE.get());
 
     }
 

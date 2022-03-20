@@ -138,6 +138,15 @@ public class ModItemModelProvider extends ItemModelProvider {
                 mcLoc("item/generated"),
                 "layer0", modLoc("item/reigniter"));
 
+        //Ore Items & Blocks
+        singleTexture(ModItems.RAW_FROZEN_FIRE.get().getRegistryName().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/raw_frozen_fire"));
+        singleTexture(ModItems.FROZEN_FIRE.get().getRegistryName().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/frozen_fire"));
+        cubeAll(ModItems.FROZEN_FIRE_ORE_ITEM.get().getRegistryName().getPath(),
+                modLoc("block/frozen_fire_ore"));
     }
 
     @Override

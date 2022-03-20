@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "coaltools:coal_hoe",
+    "coaltools:fire_hoe",
+    "coaltools:blaze_hoe",
+    "coaltools:netherite_blaze_hoe"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "coaltools:coal_pickaxe",
+    "coaltools:fire_pickaxe",
+    "coaltools:blaze_pickaxe",
+    "coaltools:netherite_blaze_pickaxe"
+  ]
+}
