@@ -3,7 +3,6 @@ package tyrannys.coaltools.client.providers;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 import tyrannys.coaltools.CoalTools;
-import tyrannys.coaltools.client.player.CoalToolsItemGroup;
 import tyrannys.coaltools.setup.ModItems;
 
 public class ModLanguageProvider extends LanguageProvider {
@@ -14,7 +13,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add("itemGroup." + CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP, "Coal Tools");
+        add("itemGroup.coaltoolsitemgroup", "Coal Tools");
 
         add(ModItems.COAL_PICKAXE.get(), "Coal Pickaxe");
         add(ModItems.FIRE_PICKAXE.get(), "Fire Pickaxe");
@@ -62,14 +61,15 @@ public class ModLanguageProvider extends LanguageProvider {
         add(ModItems.NETHERITE_BLAZE_FEET.get(), "Netherite Blaze Boots");
 
         //Misc
-        add(ModItems.RAW_FROZEN_FIRE.get(), "Raw Frozen Fire");
-        add(ModItems.FROZEN_FIRE.get(), "Frozen Fire");
+        add(ModItems.RAW_FROZEN_FIRE.get(), "Frozen Fire");
+        add(ModItems.FROZEN_FIRE.get(), "Touchable Fire");
         add(ModItems.FROZEN_FIRE_ORE_ITEM.get(), "Frozen Fire Ore");
+        add(ModItems.REIGNITER.get(), "Reigniter");
     }
 
     @Override
     public String getName() {
-        return "CoalTools LanguageProvider";
+        return CoalTools.MODID + "LanguageProvider";
     }
 
 }

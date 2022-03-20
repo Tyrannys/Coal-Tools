@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "coaltools:raw_frozen_fire"
+  },
+  "result": "coaltools:frozen_fire",
+  "experience": 0.5,
+  "cookingtime": 200
+}

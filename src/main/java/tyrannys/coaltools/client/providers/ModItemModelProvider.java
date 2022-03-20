@@ -151,6 +151,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     public String getName() {
-        return "Coal Tools Item Models";
+        return CoalTools.MODID + "Item Models";
     }
 }

@@ -21,6 +21,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     public String getName() {
-        return "Coal Tools BlockStates";
+        return CoalTools.MODID + "BlockStates";
     }
 }

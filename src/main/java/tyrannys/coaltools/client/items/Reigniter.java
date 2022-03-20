@@ -39,9 +39,7 @@ public class Reigniter extends Item {
                 ItemStack itemstack = pContext.getItemInHand();
                 if (player instanceof ServerPlayer) {
                     CriteriaTriggers.PLACED_BLOCK.trigger((ServerPlayer)player, blockpos1, itemstack);
-                    itemstack.hurtAndBreak(1, player, (p_41300_) -> {
-                        p_41300_.broadcastBreakEvent(pContext.getHand());
-                    });
+                    itemstack.hurtAndBreak(1, player, (p_41300_) -> p_41300_.broadcastBreakEvent(pContext.getHand()));
                 }
 
                 return InteractionResult.sidedSuccess(level.isClientSide());
@@ -50,12 +48,10 @@ public class Reigniter extends Item {
             }
         } else {
             level.playSound(player, blockpos, SoundEvents.FLINTANDSTEEL_USE, SoundSource.BLOCKS, 1.0F, level.getRandom().nextFloat() * 0.4F + 0.8F);
-            level.setBlock(blockpos, blockstate.setValue(BlockStateProperties.LIT, Boolean.valueOf(true)), 11);
+            level.setBlock(blockpos, blockstate.setValue(BlockStateProperties.LIT, Boolean.TRUE), 11);
             level.gameEvent(player, GameEvent.BLOCK_PLACE, blockpos);
             if (player != null) {
-                pContext.getItemInHand().hurtAndBreak(1, player, (p_41303_) -> {
-                    p_41303_.broadcastBreakEvent(pContext.getHand());
-                });
+                pContext.getItemInHand().hurtAndBreak(1, player, (p_41303_) -> p_41303_.broadcastBreakEvent(pContext.getHand()));
             }
 
             return InteractionResult.sidedSuccess(level.isClientSide());

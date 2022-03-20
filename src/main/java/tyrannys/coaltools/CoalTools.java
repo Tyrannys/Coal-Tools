@@ -26,7 +26,7 @@ public class CoalTools {
     public static final String MODID = "coaltools";
 
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public CoalTools() {
         ModItems.init();

@@ -13,18 +13,10 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial{
 
-    COAL("coal", 4, new int[]{1, 2, 3, 1}, 10, SoundEvents.ARMOR_EQUIP_IRON, 0F, 0F, () -> {
-        return Ingredient.of(Items.COAL);
-    }),
-    FIREY("firey", 14, new int[]{2, 5, 6, 2}, 12, SoundEvents.ARMOR_EQUIP_IRON, 0F, 0F, () -> {
-        return Ingredient.of(Items.COAL);
-    }),
-    BLAZE("blaze", 32, new int[]{3, 6, 8, 3}, 18, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
-        return Ingredient.of(Items.BLAZE_ROD);
-    }),
-    NETHERITE_BLAZE("netherite_blaze", 36, new int[]{3, 6, 8, 3}, 22, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.of(Items.NETHERITE_INGOT);
-    });
+    COAL("coal", 4, new int[]{1, 2, 3, 1}, 10, SoundEvents.ARMOR_EQUIP_IRON, 0F, 0F, () -> Ingredient.of(Items.COAL)),
+    FIREY("firey", 14, new int[]{2, 5, 6, 2}, 12, SoundEvents.ARMOR_EQUIP_IRON, 0F, 0F, () -> Ingredient.of(Items.COAL)),
+    BLAZE("blaze", 32, new int[]{3, 6, 8, 3}, 18, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.of(Items.BLAZE_ROD)),
+    NETHERITE_BLAZE("netherite_blaze", 36, new int[]{3, 6, 8, 3}, 22, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};

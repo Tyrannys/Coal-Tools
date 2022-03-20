@@ -27,7 +27,7 @@
   "item.coaltools.fire_pickaxe": "Fire Pickaxe",
   "item.coaltools.fire_shovel": "Fire Shovel",
   "item.coaltools.fire_sword": "Fire Sword",
-  "item.coaltools.frozen_fire": "Frozen Fire",
+  "item.coaltools.frozen_fire": "Touchable Fire",
   "item.coaltools.netherite_blaze_axe": "Netherite Blaze Axe",
   "item.coaltools.netherite_blaze_chest": "Netherite Blaze Chestplate",
   "item.coaltools.netherite_blaze_feet": "Netherite Blaze Boots",
@@ -37,6 +37,7 @@
   "item.coaltools.netherite_blaze_pickaxe": "Netherite Blaze Pickaxe",
   "item.coaltools.netherite_blaze_shovel": "Netherite Blaze Shovel",
   "item.coaltools.netherite_blaze_sword": "Netherite Blaze Sword",
-  "item.coaltools.raw_frozen_fire": "Raw Frozen Fire",
-  "itemGroup.tyrannys.coaltools.client.player.CoalToolsItemGroup@5f4491b9": "Coal Tools"
+  "item.coaltools.raw_frozen_fire": "Frozen Fire",
+  "item.coaltools.reigniter": "Reigniter",
+  "itemGroup.coaltoolsitemgroup": "Coal Tools"
 }

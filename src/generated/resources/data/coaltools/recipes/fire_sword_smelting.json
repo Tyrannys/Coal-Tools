@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "coaltools:coal_sword"
+  },
+  "result": "coaltools:fire_sword",
+  "experience": 0.5,
+  "cookingtime": 200
+}

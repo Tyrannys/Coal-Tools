@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "coaltools:coal_shovel"
+  },
+  "result": "coaltools:fire_shovel",
+  "experience": 0.5,
+  "cookingtime": 200
+}

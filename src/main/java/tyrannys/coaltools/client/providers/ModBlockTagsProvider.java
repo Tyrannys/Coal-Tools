@@ -31,7 +31,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     public String getName() {
-        return "Coal Tools BlockTags";
+        return CoalTools.MODID + "BlockTags";
     }
 
 }

@@ -71,7 +71,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     public String getName() {
-        return "CoalTools ItemTags";
+        return CoalTools.MODID + "ItemTags";
     }
 
 }

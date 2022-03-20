@@ -1,6 +1,7 @@
 package tyrannys.coaltools.client.providers;
 
 import net.minecraft.data.DataGenerator;
+import tyrannys.coaltools.CoalTools;
 import tyrannys.coaltools.client.BaseLootTableProvider;
 import tyrannys.coaltools.setup.ModBlocks;
 import tyrannys.coaltools.setup.ModItems;
@@ -18,6 +19,6 @@ public class ModLootTables extends BaseLootTableProvider {
 
     @Override
     public String getName() {
-        return "Coal Tools LootTables";
+        return CoalTools.MODID + "LootTables";
     }
 }
