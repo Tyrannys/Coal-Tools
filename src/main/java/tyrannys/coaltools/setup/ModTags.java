@@ -41,6 +41,8 @@ public class ModTags {
         public static final TagKey<Item> LEGS = forge("armor/legs");
         public static final TagKey<Item> FEET = forge("armor/feet");
 
+        public static final TagKey<Item> AUTOSMELT = forge("tools/autosmelt");
+
         //Needed for the forge tag
         private static TagKey<Item> forge(String path) {
             return ItemTags.create(new ResourceLocation(CoalTools.MODID, path));

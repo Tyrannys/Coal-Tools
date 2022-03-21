@@ -45,6 +45,12 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.BLAZE_HOE.get())
                 .add(ModItems.NETHERITE_BLAZE_HOE.get());
 
+        tag(ModTags.Items.AUTOSMELT)
+                .add(ModItems.FIRE_PICKAXE.get())
+                .add(ModItems.BLAZE_PICKAXE.get())
+                .add(ModItems.NETHERITE_BLAZE_PICKAXE.get());
+
+
         //Armor
         tag(ModTags.Items.HELM)
                 .add(ModItems.COAL_HELM.get())
