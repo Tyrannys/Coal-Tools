@@ -5,6 +5,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -17,6 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import tyrannys.coaltools.setup.ModBlocks;
 import tyrannys.coaltools.setup.ModItems;
+import tyrannys.coaltools.init.generation.OreGen;
 
 import java.util.stream.Collectors;
 
@@ -29,6 +31,7 @@ public class CoalTools {
     public static final Logger LOGGER = LogManager.getLogger();
 
     public CoalTools() {
+        IEventBus bus = MinecraftForge.EVENT_BUS;
         ModItems.init();
         ModBlocks.init();
 
@@ -43,13 +46,16 @@ public class CoalTools {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        bus.addListener(OreGen::onBiomeLoadingEvent);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-
+        event.enqueueWork(()-> {
+            OreGen.registerConfiguredFeatures();
+        });
 
     }
 

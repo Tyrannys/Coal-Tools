@@ -10,8 +10,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class CoalToolsAxe extends AxeItem {
-
-
+    
     public CoalToolsAxe(Tier pTier, float pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
