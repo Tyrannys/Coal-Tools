@@ -1,16 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XYX",
-    "X X",
+    "ZYZ",
+    "Z Z",
     "X X"
   ],
   "key": {
     "X": {
-      "item": "minecraft:blaze_rod"
+      "item": "coaltools:frozen_fire"
     },
     "Y": {
       "item": "coaltools:reigniter"
+    },
+    "Z": {
+      "item": "minecraft:blaze_rod"
     }
   },
   "result": {

@@ -1,19 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "Y",
-    "Y",
-    "X"
+    "YZ ",
+    "ZX ",
+    " X "
   ],
   "key": {
     "X": {
       "item": "minecraft:stick"
     },
     "Y": {
-      "item": "minecraft:coal"
+      "item": "minecraft:blaze_rod"
+    },
+    "Z": {
+      "item": "coaltools:frozen_fire"
     }
   },
   "result": {
-    "item": "coaltools:coal_sword"
+    "item": "coaltools:blaze_axe"
   }
 }

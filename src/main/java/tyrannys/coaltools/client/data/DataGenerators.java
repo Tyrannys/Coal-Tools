@@ -6,7 +6,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import tyrannys.coaltools.CoalTools;
-import tyrannys.coaltools.client.providers.*;
+import tyrannys.coaltools.client.data.providers.*;
 
 @Mod.EventBusSubscriber(modid = CoalTools.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {

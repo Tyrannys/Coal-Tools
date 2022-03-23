@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "Y",
-    "Y",
+    "Z",
     "X"
   ],
   "key": {
@@ -10,10 +10,13 @@
       "item": "minecraft:stick"
     },
     "Y": {
-      "item": "minecraft:coal"
+      "item": "coaltools:frozen_fire"
+    },
+    "Z": {
+      "item": "coaltools:frozen_fire"
     }
   },
   "result": {
-    "item": "coaltools:coal_sword"
+    "item": "coaltools:blaze_shovel"
   }
 }

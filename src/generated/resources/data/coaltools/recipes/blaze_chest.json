@@ -3,14 +3,17 @@
   "pattern": [
     "X X",
     "XYX",
-    "XXX"
+    "ZZZ"
   ],
   "key": {
     "X": {
-      "item": "minecraft:blaze_rod"
+      "item": "coaltools:frozen_fire"
     },
     "Y": {
       "item": "coaltools:reigniter"
+    },
+    "Z": {
+      "item": "minecraft:blaze_rod"
     }
   },
   "result": {

@@ -10,10 +10,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import tyrannys.coaltools.CoalTools;
-import tyrannys.coaltools.client.armor.ModArmorMaterials;
-import tyrannys.coaltools.client.items.Reigniter;
-import tyrannys.coaltools.client.player.CoalToolsItemGroup;
-import tyrannys.coaltools.client.tools.*;
+import tyrannys.coaltools.client.misc.CoalToolsItemGroup;
+import tyrannys.coaltools.client.playeruseableitems.armor.ModArmorMaterials;
+import tyrannys.coaltools.client.playeruseableitems.tools.ModTiers;
+import tyrannys.coaltools.client.playeruseableitems.tools.toolitems.*;
 
 public class ModItems {
 
