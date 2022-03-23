@@ -1,4 +1,5 @@
 {
+  "block.coaltools.blazing_fire_ore": "Blazing Fire Ore",
   "block.coaltools.frozen_fire_ore": "Frozen Fire Ore",
   "item.coaltools.blaze_axe": "Blaze Axe",
   "item.coaltools.blaze_chest": "Blaze Chestplate",
@@ -9,6 +10,7 @@
   "item.coaltools.blaze_pickaxe": "Blaze Pickaxe",
   "item.coaltools.blaze_shovel": "Blaze Shovel",
   "item.coaltools.blaze_sword": "Blaze Sword",
+  "item.coaltools.blazing_fire": "Blazing Fire",
   "item.coaltools.coal_axe": "Coal Axe",
   "item.coaltools.coal_chest": "Coal Chestplate",
   "item.coaltools.coal_feet": "Coal Boots",
@@ -37,6 +39,7 @@
   "item.coaltools.netherite_blaze_pickaxe": "Netherite Blaze Pickaxe",
   "item.coaltools.netherite_blaze_shovel": "Netherite Blaze Shovel",
   "item.coaltools.netherite_blaze_sword": "Netherite Blaze Sword",
+  "item.coaltools.raw_blazing_fire": "Blazing Fire Coals",
   "item.coaltools.raw_frozen_fire": "Frozen Fire",
   "item.coaltools.reigniter": "Reigniter",
   "itemGroup.coaltoolsitemgroup": "Coal Tools"

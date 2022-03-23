@@ -14,8 +14,15 @@ public class ModLootTables extends BaseLootTableProvider {
 
     @Override
     protected void addTables() {
-        lootTables.put(ModBlocks.FROZEN_FIRE_ORE.get(), createSilkTouchTable("frozen_fire_ore", ModBlocks.FROZEN_FIRE_ORE.get(), ModItems.RAW_FROZEN_FIRE.get(), 1, 3));
+        lootTables.put(ModBlocks.FROZEN_FIRE_ORE.get(),
+                createSilkTouchTable("frozen_fire_ore",
+                        ModBlocks.FROZEN_FIRE_ORE.get(),
+                        ModItems.RAW_FROZEN_FIRE.get(), 1, 3));
 
+        lootTables.put(ModBlocks.BLAZING_FIRE_ORE.get(),
+                createSilkTouchTable("blazing_fire_ore",
+                        ModBlocks.BLAZING_FIRE_ORE.get(),
+                        ModItems.RAW_BLAZING_FIRE.get(), 1, 3));
     }
 
     @Override

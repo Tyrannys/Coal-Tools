@@ -16,17 +16,28 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
 
     protected void addTags() {
+        //Mod Ore
         tag(ModTags.Blocks.ORES_FIRE)
-                .add(ModBlocks.FROZEN_FIRE_ORE.get());
+                .add(ModBlocks.FROZEN_FIRE_ORE.get())
+                .add(ModBlocks.BLAZING_FIRE_ORE.get());
 
+        //Ores
         tag(Tags.Blocks.ORES)
                 .addTag(ModTags.Blocks.ORES_FIRE);
 
-        tag(BlockTags.NEEDS_IRON_TOOL)
-                .addTag(ModTags.Blocks.ORES_FIRE);
-
+        //Pickaxe Blocks
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .addTag(ModTags.Blocks.ORES_FIRE);
+
+
+        //Needs Iron Tool
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.FROZEN_FIRE_ORE.get());
+
+        //Needs Diamond Tool
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.BLAZING_FIRE_ORE.get());
+
     }
 
     @Override

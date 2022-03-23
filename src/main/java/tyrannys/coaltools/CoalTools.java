@@ -18,7 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import tyrannys.coaltools.setup.ModBlocks;
 import tyrannys.coaltools.setup.ModItems;
-import tyrannys.coaltools.init.generation.OreGen;
+import tyrannys.coaltools.setup.init.generation.OreGen;
 
 import java.util.stream.Collectors;
 
@@ -34,6 +34,7 @@ public class CoalTools {
         IEventBus bus = MinecraftForge.EVENT_BUS;
         ModItems.init();
         ModBlocks.init();
+
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);

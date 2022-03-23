@@ -15,6 +15,7 @@ public class ModLanguageProvider extends LanguageProvider {
     protected void addTranslations() {
         add("itemGroup.coaltoolsitemgroup", "Coal Tools");
 
+        //Tools
         add(ModItems.COAL_PICKAXE.get(), "Coal Pickaxe");
         add(ModItems.FIRE_PICKAXE.get(), "Fire Pickaxe");
         add(ModItems.BLAZE_PICKAXE.get(), "Blaze Pickaxe");
@@ -40,6 +41,7 @@ public class ModLanguageProvider extends LanguageProvider {
         add(ModItems.BLAZE_HOE.get(), "Blaze Hoe");
         add(ModItems.NETHERITE_BLAZE_HOE.get(), "Netherite Blaze Hoe");
 
+        //Armor
         add(ModItems.COAL_HELM.get(), "Coal Helmet");
         add(ModItems.FIRE_HELM.get(), "Fire Helmet");
         add(ModItems.BLAZE_HELM.get(), "Blaze Helmet");
@@ -60,10 +62,17 @@ public class ModLanguageProvider extends LanguageProvider {
         add(ModItems.BLAZE_FEET.get(), "Blaze Boots");
         add(ModItems.NETHERITE_BLAZE_FEET.get(), "Netherite Blaze Boots");
 
-        //Misc
+        //Overworld Ores
         add(ModItems.RAW_FROZEN_FIRE.get(), "Frozen Fire");
         add(ModItems.FROZEN_FIRE.get(), "Touchable Fire");
         add(ModItems.FROZEN_FIRE_ORE_ITEM.get(), "Frozen Fire Ore");
+
+        //Nether Ores
+        add(ModItems.RAW_BLAZING_FIRE.get(), "Blazing Fire Coals");
+        add(ModItems.BLAZING_FIRE.get(), "Blazing Fire");
+        add(ModItems.BLAZING_FIRE_ORE_ITEM.get(), "Blazing Fire Ore");
+
+        //Misc
         add(ModItems.REIGNITER.get(), "Reigniter");
     }
 

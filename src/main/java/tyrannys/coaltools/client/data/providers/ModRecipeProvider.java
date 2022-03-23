@@ -233,7 +233,8 @@ public class ModRecipeProvider extends RecipeProvider {
 
 
         //Furnace, Blasting, and Cooking Recipes
-        //Misc
+        //Ores to Ingots
+        //Frozen Fire
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.RAW_FROZEN_FIRE.get()),
                 ModItems.FROZEN_FIRE.get(), 0.5F, 200)
                 .unlockedBy("has_item", has(ModItems.RAW_FROZEN_FIRE.get()))
@@ -242,6 +243,16 @@ public class ModRecipeProvider extends RecipeProvider {
                 ModItems.FROZEN_FIRE.get(), 0.5F, 100)
                 .unlockedBy("has_item", has(ModItems.RAW_FROZEN_FIRE.get()))
                 .save(consumer, new ResourceLocation(CoalTools.MODID, "frozen_fire_blasting"));
+
+        //Blazing Fire
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.RAW_BLAZING_FIRE.get()),
+                        ModItems.BLAZING_FIRE.get(), 1F, 200)
+                .unlockedBy("has_item", has(ModItems.RAW_BLAZING_FIRE.get()))
+                .save(consumer, new ResourceLocation(CoalTools.MODID, "blazing_fire_smelting"));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.RAW_BLAZING_FIRE.get()),
+                        ModItems.BLAZING_FIRE.get(), 1F, 100)
+                .unlockedBy("has_item", has(ModItems.RAW_BLAZING_FIRE.get()))
+                .save(consumer, new ResourceLocation(CoalTools.MODID, "blazing_fire_blasting"));
 
         //Tools
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.COAL_PICKAXE.get()),

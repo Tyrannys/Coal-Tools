@@ -139,6 +139,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                 "layer0", modLoc("item/reigniter"));
 
         //Ore Items & Blocks
+        //Overworld
         singleTexture(ModItems.RAW_FROZEN_FIRE.get().getRegistryName().getPath(),
                 mcLoc("item/generated"),
                 "layer0", modLoc("item/raw_frozen_fire"));
@@ -147,6 +148,16 @@ public class ModItemModelProvider extends ItemModelProvider {
                 "layer0", modLoc("item/frozen_fire"));
         cubeAll(ModItems.FROZEN_FIRE_ORE_ITEM.get().getRegistryName().getPath(),
                 modLoc("block/frozen_fire_ore"));
+
+        //Nether
+        singleTexture(ModItems.RAW_BLAZING_FIRE.get().getRegistryName().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/raw_blazing_fire"));
+        singleTexture(ModItems.BLAZING_FIRE.get().getRegistryName().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/blazing_fire"));
+        cubeAll(ModItems.BLAZING_FIRE_ORE_ITEM.get().getRegistryName().getPath(),
+                modLoc("block/blazing_fire_ore"));
     }
 
     @Override

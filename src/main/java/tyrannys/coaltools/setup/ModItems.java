@@ -129,6 +129,18 @@ public class ModItems {
             )
     );
 
+    public static RegistryObject<Item> BLAZING_FIRE_ORE_ITEM = fromBlock(ModBlocks.BLAZING_FIRE_ORE);
+
+    public static RegistryObject<Item> RAW_BLAZING_FIRE = ITEMS.register("raw_blazing_fire", () ->
+            new Item(
+                    new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant()
+            ));
+
+    public static RegistryObject<Item> BLAZING_FIRE = ITEMS.register("blazing_fire", () ->
+            new Item(
+               new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant()
+            ));
+
     //Armor
     //Coal Helmets and upgrades
     public static RegistryObject<Item> COAL_HELM = ITEMS.register("coal_helm", ()->

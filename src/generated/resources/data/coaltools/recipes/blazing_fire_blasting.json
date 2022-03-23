@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "coaltools:raw_blazing_fire"
+  },
+  "result": "coaltools:blazing_fire",
+  "experience": 1.0,
+  "cookingtime": 100
+}

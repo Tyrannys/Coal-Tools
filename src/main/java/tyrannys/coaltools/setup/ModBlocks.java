@@ -22,4 +22,9 @@ public class ModBlocks {
                     .sound(SoundType.STONE).requiresCorrectToolForDrops())
         );
 
+    public static final RegistryObject<Block> BLAZING_FIRE_ORE = BLOCKS.register("blazing_fire_ore", () ->
+            new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5.0F, 100F)
+                    .sound(SoundType.STONE).requiresCorrectToolForDrops())
+        );
+
 }

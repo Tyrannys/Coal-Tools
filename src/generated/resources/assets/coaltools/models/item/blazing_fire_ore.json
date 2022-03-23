@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "coaltools:block/blazing_fire_ore"
+  }
+}

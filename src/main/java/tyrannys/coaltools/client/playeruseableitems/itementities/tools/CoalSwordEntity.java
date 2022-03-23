@@ -7,8 +7,9 @@ import net.minecraft.world.level.Level;
 
 public class CoalSwordEntity extends ItemEntity {
 
-    public CoalSwordEntity(EntityType<? extends ItemEntity> entityType, Level level) {
+    public CoalSwordEntity(EntityType<? extends CoalSwordEntity> entityType, Level level) {
         super(entityType, level);
+        this.setYRot(this.random.nextFloat() * 360.0F);
     }
 
     public CoalSwordEntity(Level level, double x, double y, double z, ItemStack stack) {
