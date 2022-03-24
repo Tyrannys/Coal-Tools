@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseableitems.itementities.tools;
+package tyrannys.coaltools.client.playeruseable.itementities.tools;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.item.ItemEntity;

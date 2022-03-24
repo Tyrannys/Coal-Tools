@@ -17,6 +17,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import tyrannys.coaltools.setup.ModBlocks;
+import tyrannys.coaltools.setup.ModEnchantments;
 import tyrannys.coaltools.setup.ModItems;
 import tyrannys.coaltools.setup.init.generation.OreGen;
 
@@ -34,6 +35,7 @@ public class CoalTools {
         IEventBus bus = MinecraftForge.EVENT_BUS;
         ModItems.init();
         ModBlocks.init();
+        ModEnchantments.init();
 
 
         // Register the setup method for modloading
@@ -61,7 +63,9 @@ public class CoalTools {
     }
 
     private void DoClientStuff(final FMLClientSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            //EntityRenderers.register(ModEntities.COAL_SWORD_ENTITY.get(), CoalSwordRenderer::new);
+        });
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

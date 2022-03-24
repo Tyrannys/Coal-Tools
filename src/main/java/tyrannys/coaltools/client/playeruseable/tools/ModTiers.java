@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseableitems.tools;
+package tyrannys.coaltools.client.playeruseable.tools;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;

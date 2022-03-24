@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseableitems.itementities.entityrenderer;
+package tyrannys.coaltools.client.playeruseable.itementities.entityrenderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
@@ -17,7 +17,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import tyrannys.coaltools.client.playeruseableitems.itementities.tools.CoalSwordEntity;
+import tyrannys.coaltools.client.playeruseable.itementities.tools.CoalSwordEntity;
 
 import java.util.Random;
 

@@ -3,6 +3,7 @@ package tyrannys.coaltools.client.data.providers;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 import tyrannys.coaltools.CoalTools;
+import tyrannys.coaltools.setup.ModEnchantments;
 import tyrannys.coaltools.setup.ModItems;
 
 public class ModLanguageProvider extends LanguageProvider {
@@ -72,8 +73,12 @@ public class ModLanguageProvider extends LanguageProvider {
         add(ModItems.BLAZING_FIRE.get(), "Blazing Fire");
         add(ModItems.BLAZING_FIRE_ORE_ITEM.get(), "Blazing Fire Ore");
 
+        //Enchantments
+        add(ModEnchantments.FIRE_THORNS.get(), "Fire Thorns");
+
         //Misc
         add(ModItems.REIGNITER.get(), "Reigniter");
+
     }
 
     @Override

@@ -11,9 +11,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import tyrannys.coaltools.CoalTools;
 import tyrannys.coaltools.client.misc.CoalToolsItemGroup;
-import tyrannys.coaltools.client.playeruseableitems.armor.ModArmorMaterials;
-import tyrannys.coaltools.client.playeruseableitems.tools.ModTiers;
-import tyrannys.coaltools.client.playeruseableitems.tools.toolitems.*;
+import tyrannys.coaltools.client.playeruseable.armor.ModArmorMaterials;
+import tyrannys.coaltools.client.playeruseable.tools.ModTiers;
+import tyrannys.coaltools.client.playeruseable.tools.toolitems.*;
 
 public class ModItems {
 
@@ -144,7 +144,7 @@ public class ModItems {
     //Armor
     //Coal Helmets and upgrades
     public static RegistryObject<Item> COAL_HELM = ITEMS.register("coal_helm", ()->
-            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
+            new CoalToolsArmor(ModArmorMaterials.COAL, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_HELM = ITEMS.register("fire_helm", ()->
             new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
@@ -158,7 +158,7 @@ public class ModItems {
 
     //Coal ChestPlates and upgrades
     public static RegistryObject<Item> COAL_CHEST = ITEMS.register("coal_chest", ()->
-            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
+            new CoalToolsArmor(ModArmorMaterials.COAL, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_CHEST = ITEMS.register("fire_chest", ()->
             new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
@@ -172,7 +172,7 @@ public class ModItems {
 
     //Coal Legs and upgrades
     public static RegistryObject<Item> COAL_LEGS = ITEMS.register("coal_legs", ()->
-            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
+            new CoalToolsArmor(ModArmorMaterials.COAL, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_LEGS = ITEMS.register("fire_legs", ()->
             new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
@@ -186,7 +186,7 @@ public class ModItems {
 
     //Coal Feet and upgrades
     public static RegistryObject<Item> COAL_FEET = ITEMS.register("coal_feet", ()->
-            new ArmorItem(ModArmorMaterials.COAL, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
+            new CoalToolsArmor(ModArmorMaterials.COAL, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_FEET = ITEMS.register("fire_feet", ()->
             new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())

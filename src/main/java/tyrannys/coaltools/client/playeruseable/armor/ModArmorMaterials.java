@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseableitems.armor;
+package tyrannys.coaltools.client.playeruseable.armor;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;

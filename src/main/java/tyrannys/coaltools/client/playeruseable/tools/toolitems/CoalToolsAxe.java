@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseableitems.tools.toolitems;
+package tyrannys.coaltools.client.playeruseable.tools.toolitems;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;

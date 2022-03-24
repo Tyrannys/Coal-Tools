@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseableitems.tools.toolitems;
+package tyrannys.coaltools.client.playeruseable.tools.toolitems;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -6,7 +6,7 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import tyrannys.coaltools.client.playeruseableitems.itementities.tools.CoalSwordEntity;
+import tyrannys.coaltools.client.playeruseable.itementities.tools.CoalSwordEntity;
 
 import javax.annotation.Nullable;
 import java.util.List;
