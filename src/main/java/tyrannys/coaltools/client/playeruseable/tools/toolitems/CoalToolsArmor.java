@@ -54,5 +54,4 @@ public class CoalToolsArmor extends ArmorItem {
         }
         return false;
     }
-
 }

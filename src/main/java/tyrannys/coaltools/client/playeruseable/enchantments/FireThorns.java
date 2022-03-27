@@ -20,16 +20,8 @@ public class FireThorns extends Enchantment {
     @Override
     public int getDamageProtection(int pLevel, DamageSource pSource) {
 
-        if (pLevel == 1) {
-            try {
-                wait(200);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        if (pLevel == 1 && player.isOnFire()) {
             player.clearFire();
-        }
-        else {
-            player.fireImmune();
         }
 
         return super.getDamageProtection(pLevel, pSource);
@@ -43,19 +35,19 @@ public class FireThorns extends Enchantment {
             BlockPos position = pAttacker.blockPosition();
 
             if(pLevel == 1) {
-                pAttacker.setSecondsOnFire(3);
+                pAttacker.setSecondsOnFire(8);
             }
             else if (pLevel == 2) {
-                pAttacker.setSecondsOnFire(5);
+                pAttacker.setSecondsOnFire(6);
             }
             else if (pLevel == 3) {
-                pAttacker.setSecondsOnFire(10);
+                pAttacker.setSecondsOnFire(4);
             }
             else if (pLevel == 4) {
-                pAttacker.setSecondsOnFire(15);
+                pAttacker.setSecondsOnFire(2);
             }
             else if (pLevel == 5) {
-                pAttacker.setSecondsOnFire(20);
+                pAttacker.setSecondsOnFire(1);
             }
 
         }
