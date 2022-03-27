@@ -41,6 +41,9 @@ public class ModTags {
         public static final TagKey<Item> LEGS = forge("armor/legs");
         public static final TagKey<Item> FEET = forge("armor/feet");
 
+        public static final TagKey<Item> FIRE_RESISTANT = forge("armor/fire_resistant");
+        public static final TagKey<Item> FIRE_IMMUNE = forge("armor/fire_immune");
+
         public static final TagKey<Item> AUTOSMELT = forge("tools/autosmelt");
 
         //Needed for the forge tag

@@ -4,9 +4,13 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.item.*;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import tyrannys.coaltools.client.playeruseable.itementities.tools.CoalSwordEntity;
+import tyrannys.coaltools.setup.ModItems;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -28,13 +32,11 @@ public class CoalToolsSword extends SwordItem {
     }
 
     @Override
-    public boolean hasCustomEntity(ItemStack stack) {
-        return true;
+    public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
+        if (entity.isOnFire()) {
+            entity.remove(Entity.RemovalReason.KILLED);
+            entity.spawnAtLocation(ModItems.FIRE_SWORD.get());
+        }
+        return false;
     }
-
-    @Override
-    public Entity createEntity(Level level, Entity location, ItemStack stack) {
-        return new CoalSwordEntity(level, location.getX(), location.getY(), location.getZ(), stack);
-    }
-
 }

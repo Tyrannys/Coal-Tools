@@ -3,12 +3,15 @@ package tyrannys.coaltools.client.playeruseable.tools.toolitems;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import tyrannys.coaltools.setup.ModItems;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -27,6 +30,29 @@ public class CoalToolsArmor extends ArmorItem {
         else {
             tooltip.add(new TextComponent("\u00A77"+"Hold "+"\u00A7e"+"shift "+"\u00A77"+"for more info" + "\u00A77"));
         }
+    }
+
+    @Override //fix
+    public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
+        if (entity.isOnFire()) {
+            if (entity.getArmorSlots().iterator().next().is(ModItems.COAL_HELM.get())) {
+                entity.remove(Entity.RemovalReason.KILLED);
+                entity.spawnAtLocation(ModItems.FIRE_HELM.get());
+            }
+            else if (entity.getArmorSlots().iterator().next().is(ModItems.COAL_CHEST.get())) {
+                entity.remove(Entity.RemovalReason.KILLED);
+                entity.spawnAtLocation(ModItems.FIRE_CHEST.get());
+            }
+            else if (entity.getArmorSlots().iterator().next().is(ModItems.COAL_LEGS.get())) {
+                entity.remove(Entity.RemovalReason.KILLED);
+                entity.spawnAtLocation(ModItems.FIRE_LEGS.get());
+            }
+            else if (entity.getArmorSlots() == ModItems.COAL_FEET.get()) {
+                entity.remove(Entity.RemovalReason.KILLED);
+                entity.spawnAtLocation(ModItems.COAL_FEET.get());
+            }
+        }
+        return false;
     }
 
 }

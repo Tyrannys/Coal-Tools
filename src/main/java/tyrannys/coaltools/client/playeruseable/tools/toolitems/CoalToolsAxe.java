@@ -3,8 +3,11 @@ package tyrannys.coaltools.client.playeruseable.tools.toolitems;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
+import tyrannys.coaltools.setup.ModItems;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -23,5 +26,14 @@ public class CoalToolsAxe extends AxeItem {
          else {
              tooltip.add(new TextComponent("\u00A77"+"Hold "+"\u00A7e"+"shift "+"\u00A77"+"for more info" + "\u00A77"));
          }
+    }
+
+    @Override
+    public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
+        if (entity.isOnFire()) {
+            entity.remove(Entity.RemovalReason.KILLED);
+            entity.spawnAtLocation(ModItems.FIRE_AXE.get());
+        }
+        return false;
     }
 }

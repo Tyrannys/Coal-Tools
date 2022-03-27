@@ -18,7 +18,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(ModTags.Blocks.ORES_FIRE, ModTags.Items.ORES_FIRE);
 
 
-        //TOOLS
+        //Tools
         tag(ModTags.Items.PICKAXE_TOOL)
                 .add(ModItems.COAL_PICKAXE.get())
                 .add(ModItems.FIRE_PICKAXE.get())
@@ -73,6 +73,19 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.BLAZE_FEET.get())
                 .add(ModItems.NETHERITE_BLAZE_FEET.get());
 
+        //FireResistant Armor
+        tag(ModTags.Items.FIRE_RESISTANT)
+                .add(ModItems.BLAZE_HELM.get())
+                .add(ModItems.BLAZE_CHEST.get())
+                .add(ModItems.BLAZE_LEGS.get())
+                .add(ModItems.BLAZE_FEET.get());
+
+        //FireImmune Armor
+        tag(ModTags.Items.FIRE_IMMUNE)
+                .add(ModItems.NETHERITE_BLAZE_HELM.get())
+                .add(ModItems.NETHERITE_BLAZE_CHEST.get())
+                .add(ModItems.NETHERITE_BLAZE_LEGS.get())
+                .add(ModItems.NETHERITE_BLAZE_FEET.get());
     }
 
     @Override

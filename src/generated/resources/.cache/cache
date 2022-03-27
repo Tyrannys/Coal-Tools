@@ -1,6 +1,6 @@
 f989d8df3266641e051e95be39198da8108ff6a6 assets/coaltools/blockstates/blazing_fire_ore.json
 7bf0c29040a7855841de18ebff56983f1fa127fe assets/coaltools/blockstates/frozen_fire_ore.json
-57ddf8fe708185d3628b695252e62f3c2c684ea4 assets/coaltools/lang/en_us.json
+3a86d28db7895689a31f70962ad18589efaba1d4 assets/coaltools/lang/en_us.json
 6b92157204fa4185650bba130fd763b9a8069087 assets/coaltools/models/block/blazing_fire_ore.json
 25b82a56f6d5ed07359cfa5085f03e7c3cf82ff0 assets/coaltools/models/block/frozen_fire_ore.json
 fe3d7e9d21467e80256d3aaf15a02e5135c167ba assets/coaltools/models/item/blaze_axe.json
@@ -146,6 +146,8 @@ d597e60f76a25d95b7aedecfd2f60fe65d5544b6 data/coaltools/recipes/raw_frozen_fire.
 fd85bcfaae1ed56cbd0b951b8143675ca30c1bb6 data/coaltools/recipes/reigniter.json
 d1a8d31b8f2ad05bc33566a8149e0ecf4b7a3f82 data/coaltools/tags/items/armor/chest.json
 837c44e779234365e0d5e25fb5ca6c2b72481d88 data/coaltools/tags/items/armor/feet.json
+95a45f9006f09db723b80fc39ded638f204379e5 data/coaltools/tags/items/armor/fire_immune.json
+2a07cd5b052eba74fffd2a7d139e464d3f766cee data/coaltools/tags/items/armor/fire_resistant.json
 757d5990bd5acf8e2b0b7e4c5445981c1c809d1b data/coaltools/tags/items/armor/helm.json
 0cdb6e51fa093ef9f693e2532e260f73a975103f data/coaltools/tags/items/armor/legs.json
 74700d556ca80c7a1db5fd4efb09c3ddb26cad66 data/coaltools/tags/items/ores/fire.json

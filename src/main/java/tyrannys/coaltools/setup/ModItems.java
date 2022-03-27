@@ -147,13 +147,13 @@ public class ModItems {
             new CoalToolsArmor(ModArmorMaterials.COAL, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_HELM = ITEMS.register("fire_helm", ()->
-            new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.FIREY, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
     public static RegistryObject<Item> BLAZE_HELM = ITEMS.register("blaze_helm", ()->
-            new ArmorItem(ModArmorMaterials.BLAZE, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.BLAZE, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
     public static RegistryObject<Item> NETHERITE_BLAZE_HELM = ITEMS.register("netherite_blaze_helm", ()->
-            new ArmorItem(ModArmorMaterials.NETHERITE_BLAZE, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.NETHERITE_BLAZE, EquipmentSlot.HEAD, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
 
     //Coal ChestPlates and upgrades
@@ -161,13 +161,13 @@ public class ModItems {
             new CoalToolsArmor(ModArmorMaterials.COAL, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_CHEST = ITEMS.register("fire_chest", ()->
-            new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.FIREY, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
     public static RegistryObject<Item> BLAZE_CHEST = ITEMS.register("blaze_chest", ()->
-            new ArmorItem(ModArmorMaterials.BLAZE, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.BLAZE, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
     public static RegistryObject<Item> NETHERITE_BLAZE_CHEST = ITEMS.register("netherite_blaze_chest", ()->
-            new ArmorItem(ModArmorMaterials.NETHERITE_BLAZE, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.NETHERITE_BLAZE, EquipmentSlot.CHEST, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
 
     //Coal Legs and upgrades
@@ -175,13 +175,13 @@ public class ModItems {
             new CoalToolsArmor(ModArmorMaterials.COAL, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_LEGS = ITEMS.register("fire_legs", ()->
-            new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.FIREY, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
     public static RegistryObject<Item> BLAZE_LEGS = ITEMS.register("blaze_legs", ()->
-            new ArmorItem(ModArmorMaterials.BLAZE, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.BLAZE, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
     public static RegistryObject<Item> NETHERITE_BLAZE_LEGS = ITEMS.register("netherite_blaze_legs", ()->
-            new ArmorItem(ModArmorMaterials.NETHERITE_BLAZE, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.NETHERITE_BLAZE, EquipmentSlot.LEGS, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
 
     //Coal Feet and upgrades
@@ -189,13 +189,13 @@ public class ModItems {
             new CoalToolsArmor(ModArmorMaterials.COAL, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP))
     );
     public static RegistryObject<Item> FIRE_FEET = ITEMS.register("fire_feet", ()->
-            new ArmorItem(ModArmorMaterials.FIREY, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.FIREY, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
     public static RegistryObject<Item> BLAZE_FEET = ITEMS.register("blaze_feet", ()->
-            new ArmorItem(ModArmorMaterials.BLAZE, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.BLAZE, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
     public static RegistryObject<Item> NETHERITE_BLAZE_FEET = ITEMS.register("netherite_blaze_feet", ()->
-            new ArmorItem(ModArmorMaterials.NETHERITE_BLAZE, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
+            new OnFireArmor(ModArmorMaterials.NETHERITE_BLAZE, EquipmentSlot.FEET, new Item.Properties().tab(CoalToolsItemGroup.COAL_TOOLS_ITEM_GROUP).fireResistant())
     );
 
     public static final BlockBehaviour.Properties BLOCK_PROPERTIES = BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops();

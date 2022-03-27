@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "coaltools:netherite_blaze_helm",
+    "coaltools:netherite_blaze_chest",
+    "coaltools:netherite_blaze_legs",
+    "coaltools:netherite_blaze_feet"
+  ]
+}
