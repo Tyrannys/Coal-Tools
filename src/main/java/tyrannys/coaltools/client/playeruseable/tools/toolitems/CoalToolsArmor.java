@@ -32,24 +32,24 @@ public class CoalToolsArmor extends ArmorItem {
         }
     }
 
-    @Override //fix
+    @Override
     public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
         if (entity.isOnFire()) {
-            if (entity.getArmorSlots().iterator().next().is(ModItems.COAL_HELM.get())) {
+            if (stack.is(ModItems.COAL_HELM.get())) {
                 entity.remove(Entity.RemovalReason.KILLED);
                 entity.spawnAtLocation(ModItems.FIRE_HELM.get());
             }
-            else if (entity.getArmorSlots().iterator().next().is(ModItems.COAL_CHEST.get())) {
+            else if (stack.is(ModItems.COAL_CHEST.get())) {
                 entity.remove(Entity.RemovalReason.KILLED);
                 entity.spawnAtLocation(ModItems.FIRE_CHEST.get());
             }
-            else if (entity.getArmorSlots().iterator().next().is(ModItems.COAL_LEGS.get())) {
+            else if (stack.is(ModItems.COAL_LEGS.get())) {
                 entity.remove(Entity.RemovalReason.KILLED);
                 entity.spawnAtLocation(ModItems.FIRE_LEGS.get());
             }
-            else if (entity.getArmorSlots() == ModItems.COAL_FEET.get()) {
+            else if (stack.is(ModItems.COAL_FEET.get())) {
                 entity.remove(Entity.RemovalReason.KILLED);
-                entity.spawnAtLocation(ModItems.COAL_FEET.get());
+                entity.spawnAtLocation(ModItems.FIRE_FEET.get());
             }
         }
         return false;
