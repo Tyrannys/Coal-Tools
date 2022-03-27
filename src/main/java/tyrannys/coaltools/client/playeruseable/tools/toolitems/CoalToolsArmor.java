@@ -6,10 +6,8 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import tyrannys.coaltools.setup.ModItems;
 
@@ -25,10 +23,39 @@ public class CoalToolsArmor extends ArmorItem {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flagIn) {
         if (Screen.hasShiftDown()) {
-            tooltip.add(new TextComponent("\u00A7e"+"Thrown into a furnace may have some adverse effects" + "\u00A7e"));
+            tooltip.add(new TextComponent("\u00A7e"+"Thrown into a fire may have adverse effects" + "\u00A7e"));
         }
         else {
             tooltip.add(new TextComponent("\u00A77"+"Hold "+"\u00A7e"+"shift "+"\u00A77"+"for more info" + "\u00A77"));
+        }
+    }
+
+
+
+    @Override
+    public void onArmorTick(ItemStack stack, Level level, Player player) {
+        ItemStack head = new ItemStack(ModItems.FIRE_HELM.get());
+        ItemStack chest = new ItemStack(ModItems.FIRE_CHEST.get());
+        ItemStack legs = new ItemStack(ModItems.FIRE_LEGS.get());
+        ItemStack feet = new ItemStack(ModItems.FIRE_FEET.get());
+
+        if (player.isOnFire() || player.isInLava()) {
+            if (stack.is(ModItems.COAL_HELM.get())) {
+                stack.shrink(1);
+                player.setItemSlot(EquipmentSlot.HEAD, head);
+            }
+            else if (stack.is(ModItems.COAL_CHEST.get())) {
+                stack.shrink(1);
+                player.setItemSlot(EquipmentSlot.CHEST, chest);
+            }
+            else if (stack.is(ModItems.COAL_LEGS.get())) {
+                stack.shrink(1);
+                player.setItemSlot(EquipmentSlot.LEGS, legs);
+            }
+            else if (stack.is(ModItems.COAL_FEET.get())) {
+                stack.shrink(1);
+                player.setItemSlot(EquipmentSlot.FEET, feet);
+            }
         }
     }
 

@@ -7,8 +7,8 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import tyrannys.coaltools.setup.ModItems;
 
-import static tyrannys.coaltools.setup.ModTags.Items.FIRE_IMMUNE;
 import static tyrannys.coaltools.setup.ModTags.Items.FIRE_RESISTANT;
 
 public class OnFireArmor extends ArmorItem {
@@ -20,8 +20,10 @@ public class OnFireArmor extends ArmorItem {
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
 
-        if (stack.is(FIRE_IMMUNE)) {
+        if (stack.is(ModItems.BLAZE_HELM.get())) {
             player.isInvulnerableTo(DamageSource.LAVA);
+            player.isInvulnerableTo(DamageSource.ON_FIRE);
+            player.isInvulnerableTo(DamageSource.IN_FIRE);
         }
 
         if (stack.is(FIRE_RESISTANT)) {

@@ -10,6 +10,7 @@ import tyrannys.coaltools.client.data.providers.*;
 
 @Mod.EventBusSubscriber(modid = CoalTools.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
+
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator gen = event.getGenerator();
@@ -30,4 +31,5 @@ public class DataGenerators {
         }
 
     }
+
 }
