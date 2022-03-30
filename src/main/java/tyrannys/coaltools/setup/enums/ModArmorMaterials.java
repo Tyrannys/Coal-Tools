@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseable.armor;
+package tyrannys.coaltools.setup.enums;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;

@@ -19,7 +19,8 @@ import org.apache.logging.log4j.Logger;
 import tyrannys.coaltools.setup.ModBlocks;
 import tyrannys.coaltools.setup.ModEnchantments;
 import tyrannys.coaltools.setup.ModItems;
-import tyrannys.coaltools.setup.init.generation.OreGen;
+import tyrannys.coaltools.init.generation.OreGen;
+import tyrannys.coaltools.setup.ModSerializers;
 
 import java.util.stream.Collectors;
 
@@ -36,6 +37,7 @@ public class CoalTools {
         ModItems.init();
         ModBlocks.init();
         ModEnchantments.init();
+        ModSerializers.init();
 
 
         // Register the setup method for modloading
@@ -64,7 +66,7 @@ public class CoalTools {
 
     private void DoClientStuff(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            //EntityRenderers.register(ModEntities.COAL_SWORD_ENTITY.get(), CoalSwordRenderer::new);
+
         });
     }
 

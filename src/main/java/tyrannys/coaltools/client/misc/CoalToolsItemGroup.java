@@ -5,6 +5,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 import tyrannys.coaltools.setup.ModItems;
 
 public class CoalToolsItemGroup extends CreativeModeTab {
@@ -17,7 +18,7 @@ public class CoalToolsItemGroup extends CreativeModeTab {
     }
     @OnlyIn(Dist.CLIENT)
     @Override
-    public ItemStack makeIcon() {
+    public @NotNull ItemStack makeIcon() {
         return new ItemStack(icon);
     }
     public static final CoalToolsItemGroup COAL_TOOLS_ITEM_GROUP = new CoalToolsItemGroup("coaltoolsitemgroup", ()->

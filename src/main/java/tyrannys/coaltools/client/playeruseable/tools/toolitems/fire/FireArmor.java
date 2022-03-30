@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseable.tools.toolitems;
+package tyrannys.coaltools.client.playeruseable.tools.toolitems.fire;
 
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -11,9 +11,9 @@ import tyrannys.coaltools.setup.ModItems;
 
 import static tyrannys.coaltools.setup.ModTags.Items.FIRE_RESISTANT;
 
-public class OnFireArmor extends ArmorItem {
+public class FireArmor extends ArmorItem {
 
-    public OnFireArmor(ArmorMaterial pMaterial, EquipmentSlot pSlot, Properties pProperties) {
+    public FireArmor(ArmorMaterial pMaterial, EquipmentSlot pSlot, Properties pProperties) {
         super(pMaterial, pSlot, pProperties);
     }
 

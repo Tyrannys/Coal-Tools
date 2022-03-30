@@ -1,4 +1,4 @@
-package tyrannys.coaltools.setup.init.generation;
+package tyrannys.coaltools.init.generation;
 
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.OreFeatures;

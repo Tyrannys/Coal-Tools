@@ -1,4 +1,4 @@
-package tyrannys.coaltools.setup.init;
+package tyrannys.coaltools.init;
 
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;

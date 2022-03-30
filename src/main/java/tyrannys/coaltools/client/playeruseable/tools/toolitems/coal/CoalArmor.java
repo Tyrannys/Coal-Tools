@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseable.tools.toolitems;
+package tyrannys.coaltools.client.playeruseable.tools.toolitems.coal;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -14,9 +14,9 @@ import tyrannys.coaltools.setup.ModItems;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class CoalToolsArmor extends ArmorItem {
+public class CoalArmor extends ArmorItem {
 
-    public CoalToolsArmor(ArmorMaterial pMaterial, EquipmentSlot pSlot, Properties pProperties) {
+    public CoalArmor(ArmorMaterial pMaterial, EquipmentSlot pSlot, Properties pProperties) {
         super(pMaterial, pSlot, pProperties);
     }
 

@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseable.tools.toolitems;
+package tyrannys.coaltools.client.playeruseable.tools.toolitems.fire;
 
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;

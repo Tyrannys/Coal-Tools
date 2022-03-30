@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "entries": [
+    "coaltools:smelting_iron",
+    "coaltools:smelting_copper",
+    "coaltools:smelting_gold"
+  ]
+}

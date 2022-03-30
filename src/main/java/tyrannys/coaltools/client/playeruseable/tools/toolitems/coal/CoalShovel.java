@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseable.tools.toolitems;
+package tyrannys.coaltools.client.playeruseable.tools.toolitems.coal;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -14,9 +14,10 @@ import tyrannys.coaltools.setup.ModItems;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class CoalToolsHoe extends HoeItem {
+public class CoalShovel extends ShovelItem {
 
-    public CoalToolsHoe(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
+
+    public CoalShovel(Tier pTier, float pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
 
@@ -34,7 +35,7 @@ public class CoalToolsHoe extends HoeItem {
     public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
         if (entity.isOnFire()) {
             entity.remove(Entity.RemovalReason.KILLED);
-            entity.spawnAtLocation(ModItems.FIRE_HOE.get());
+            entity.spawnAtLocation(ModItems.FIRE_SHOVEL.get());
         }
         return false;
     }
@@ -43,7 +44,8 @@ public class CoalToolsHoe extends HoeItem {
     public void onUsingTick(ItemStack stack, LivingEntity player, int count) {
         if (player.isOnFire()) {
             stack.shrink(1);
-            player.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.FIRE_HOE.get()));
+            player.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.FIRE_SHOVEL.get()));
         }
     }
+
 }

@@ -1,4 +1,4 @@
-package tyrannys.coaltools.client.playeruseable.tools.toolitems;
+package tyrannys.coaltools.client.playeruseable.tools.toolitems.coal;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -7,8 +7,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -17,9 +18,11 @@ import tyrannys.coaltools.setup.ModItems;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class CoalToolsPickaxe extends PickaxeItem {
+public class CoalSword extends SwordItem {
 
-    public CoalToolsPickaxe(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
+    private net.minecraft.world.entity.LivingEntity LivingEntity;
+
+    public CoalSword(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
 
@@ -37,16 +40,27 @@ public class CoalToolsPickaxe extends PickaxeItem {
     public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
         if (entity.isOnFire()) {
             entity.remove(Entity.RemovalReason.KILLED);
-            entity.spawnAtLocation(ModItems.FIRE_PICKAXE.get());
+            entity.spawnAtLocation(ModItems.FIRE_SWORD.get());
         }
         return false;
     }
 
     @Override
     public void onUsingTick(ItemStack stack, LivingEntity player, int count) {
-        if (player.isOnFire()) {
+        if (player.isOnFire() && count == 1) {
             stack.shrink(1);
-            player.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.FIRE_PICKAXE.get()));
+            player.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.FIRE_SWORD.get()));
         }
+    }
+
+
+
+    @Override
+    public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
+        if (entity.isOnFire() || player.isOnFire()) {
+            stack.shrink(1);
+            player.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.FIRE_SWORD.get()));
+        }
+        return false;
     }
 }
