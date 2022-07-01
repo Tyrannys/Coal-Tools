@@ -20,7 +20,6 @@ import tyrannys.coaltools.setup.ModBlocks;
 import tyrannys.coaltools.setup.ModEnchantments;
 import tyrannys.coaltools.setup.ModItems;
 import tyrannys.coaltools.init.generation.OreGen;
-import tyrannys.coaltools.setup.ModSerializers;
 
 import java.util.stream.Collectors;
 
@@ -37,7 +36,6 @@ public class CoalTools {
         ModItems.init();
         ModBlocks.init();
         ModEnchantments.init();
-        ModSerializers.init();
 
 
         // Register the setup method for modloading
